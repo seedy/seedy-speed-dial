@@ -1,0 +1,10 @@
+<div *ngIf="!main">No trigger</div>
+<button mat-fab (mouseenter)="toggle($event)" (click)="toggle($event)">
+  <mat-icon *ngIf="menuOpen">
+    <ng-content select="ssd-speed-dial-menu-main"></ng-content>
+  </mat-icon>
+  <mat-icon *ngIf="!menuOpen">add</mat-icon>
+</button>
+<div *ngIf="menuOpen" [@flingOut]="{value: null, params: {xAxis: xAxis, yAxis: yAxis}}" class="speed-dial-menu" fxLayout="{{layoutAxis}}" fxLayoutAlign="center center">
+  <ng-content></ng-content>
+</div>

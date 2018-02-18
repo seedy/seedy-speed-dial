@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '_theme';
+@import "global";
+
+@include mat-core();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ssd-theme);
